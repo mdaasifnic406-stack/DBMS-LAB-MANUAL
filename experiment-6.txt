@@ -4,9 +4,6 @@ Table altered.
 
 SQL> update bank_branch set branch_name='union' where id='b003';
 update bank_branch set branch_name='union' where id='b003'
-                                                 *
-ERROR at line 1:
-ORA-00904: "ID": invalid identifier
 
 
 SQL> update bank_branch set branch_name='union' where branch_id='b003';
@@ -15,9 +12,6 @@ SQL> update bank_branch set branch_name='union' where branch_id='b003';
 
 SQL> update bank_branch set state='delhi' where branch_name='boi';
 update bank_branch set state='delhi' where branch_name='boi'
-                       *
-ERROR at line 1:
-ORA-00904: "STATE": invalid identifier
 
 
 SQL> update bank_branch set branch_state='delhi' where branch_state='gujarat';
@@ -53,9 +47,6 @@ delhi                                    07-MAY-11
 
 SQL> update from bank_branch set branch_open_date='04-nov-2015' where branch_open_date='04-feb-1998';
 update from bank_branch set branch_open_date='04-nov-2015' where branch_open_date='04-feb-1998'
-       *
-ERROR at line 1:
-ORA-00903: invalid table name
 
 
 SQL> update bank_branch set branch_open_date='04-nov-2015' where branch_open_date='04-feb-1998';
@@ -120,10 +111,6 @@ SQL> delete from bank_branch where branch_open_date='07-may-2011';
 
 SQL> rename table bank_branch to branch_master;
 rename table bank_branch to branch_master
-       *
-ERROR at line 1:
-ORA-00903: invalid table name
-
 
 SQL> rename bank_branch to branch_master;
 
